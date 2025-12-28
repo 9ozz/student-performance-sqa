@@ -1,9 +1,22 @@
 START
+
 Input number_of_modules
+
+IF number_of_modules <= 0 THEN
+    Display "Invalid number of modules"
+    STOP
+END IF
+
 total = 0
 
 FOR i = 1 to number_of_modules
     Input mark
+    
+    IF mark < 0 OR mark > 100 THEN
+        Display "Invalid mark entered"
+        STOP
+    END IF
+    
     total = total + mark
 END FOR
 
@@ -15,5 +28,7 @@ ELSE
     status = "FAIL"
 END IF
 
-Display average and status
+Display average
+Display status
+
 END
