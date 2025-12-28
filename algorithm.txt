@@ -17,3 +17,5 @@ END IF
 
 Display average and status
 END
+
+//Fixed invalid input handling
